@@ -3,7 +3,7 @@ class Token extends Service {
     async refreshToken() {
         const id = this.config.wechat.id;
         const secret = this.config.wechat.secret;
-        const url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=kround&appid=' + id + '&secret=' + secret;
+        const url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' + id + '&secret=' + secret;
         const res = await this.ctx.curl(url, {
             dataType: 'json',
         });
