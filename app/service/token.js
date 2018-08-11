@@ -1,5 +1,4 @@
 const Service = require('egg').Service;
-const crypto = require('crypto')
 class Token extends Service {
     async refreshToken() {
         const id = this.config.wechat.id;
