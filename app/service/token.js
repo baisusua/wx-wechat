@@ -7,6 +7,7 @@ class Token extends Service {
         const res = await this.ctx.curl(url, {
             dataType: 'json',
         });
+        console.log(res);
         return res.data;
     }
     async saveToken(token) {
